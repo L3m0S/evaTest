@@ -9,13 +9,8 @@ module.exports = {
             callback(null, path.resolve(__dirname, '..', '..', 'tmp', 'uploadedFiles'));
         },
         filename: (req, file, callback) => {
-            crypto.randomBytes(16, (err, hash) =>{
-                if(err) callback(err);
-
-                const fileName = `${hash.toString('hex')}-${file.originalname}`
-
-                callback(null, fileName);
-            })
+            const fileName = `Pokedex.xlsx`
+            callback(null, fileName);
         }
     }),
     limits: {

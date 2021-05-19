@@ -9,7 +9,6 @@ app.use(morgan('dev'))
 app.use(require('./routes'));
 
 
-
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
     console.log(`Servidor ouvindo na porta ${port}...`)
