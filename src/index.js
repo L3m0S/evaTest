@@ -1,6 +1,8 @@
 const express = require('express');
 const morgan = require('morgan');
 
+require('./database/index')
+
 const app = express();
 
 app.use(express.json());

@@ -9,7 +9,7 @@ async function toJson() {
         worksheets[sheetName] = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName]);
     }
     
-    console.log(worksheets.Planilha1[416]);
+    return worksheets.Planilha1
 }
 
 
