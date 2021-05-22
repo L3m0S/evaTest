@@ -2,19 +2,22 @@ const Pokemon = require('../models/Pokemon');
 
 module.exports = {
     async store(pokemons) {
-
-        const pokemon = await Pokemon.create({
-            name: pokemons.Pokemon, 
-            type1: pokemons.type1,
-            type2: pokemons.type2,
-            hp: pokemons.hp, 
-            atk: pokemons.atk,
-            def: pokemons.def,
-            spa: pokemons.spa, 
-            spd: pokemons.spd,
-            spe: pokemons.spe,
-            total_status: pokemons.totalStatus
-        })
-        return pokemon
+        console.log(pokemons.length)
+        for(let i = 0; i <= pokemons.length - 1; i++){
+            console.log(i)
+            let pokemon = await Pokemon.create({
+                name: pokemons[i]["Pokemon"], 
+                type1: pokemons[i]["Type I"],
+                type2: pokemons[i]["Type II"],
+                hp: pokemons[i]["HP"], 
+                atk: pokemons[i]["Atk"],
+                def: pokemons[i]["Def"],
+                spa: pokemons[i]["SpA"], 
+                spd: pokemons[i]["SpD"],
+                spe: pokemons[i]["Spe"],
+                totalStatus: pokemons[i]["Total Status"]
+            })
+        }
+        
     }
 }

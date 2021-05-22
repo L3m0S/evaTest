@@ -1,4 +1,4 @@
-const { sequelize } = require("sequelize/lib/model");
+'use strict';
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
@@ -8,11 +8,13 @@ module.exports = {
          type: Sequelize.INTEGER,
          primaryKey: true,
          autoIncrement: true,
-         allowNull: false
+         allowNull: false,
+         unique: true
        },
        name: {
          type: Sequelize.STRING,
          allowNull: false,
+         unique: true,
        },
        type1: {
           type: Sequelize.STRING,
